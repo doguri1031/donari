@@ -69,21 +69,110 @@ public class imageResize {
 		String txt = new String();
 		txt += "file '" + imgs.get(0).getName() + "'";
 		txt += "\r\n";
-		txt += "duration 00:00:02.111";
+		txt += "duration 00:00:04.000";
 		txt += "\r\n";
-
-		for (int i = 0; i < imgs.size(); i++) {
-			txt += "file '" + imgs.get(i).getName() + "'";
-			txt += "\r\n";
-			txt += "duration 00:00:02.111";
-			txt += "\r\n";
-		}
-
+		//System.out.println("[txt 1] "+txt);
 		fw.write(txt);
 		fw.flush();
+		txt="";
+		
+		for (int i = 1; i < 4; i++) {
+			txt += "file '" + imgs.get(i).getName() + "'";
+			txt += "\r\n";
+			txt += "duration 00:00:01.000";
+			txt += "\r\n";
+			//System.out.println("[txt 2-4] "+txt);
+		}
+		fw.write(txt);
+		fw.flush();
+		txt="";
+		
+		for (int i = 4; i < 6; i++) {
+			txt += "file '" + imgs.get(i).getName() + "'";
+			txt += "\r\n";
+			txt += "duration 00:00:02.500";
+			txt += "\r\n";
+			//System.out.println("[txt 5-6] "+txt);
+		}
+		fw.write(txt);
+		fw.flush();
+		txt="";
+		
+		for (int i = 6; i < 11; i++) {
+			txt += "file '" + imgs.get(i).getName() + "'";
+			txt += "\r\n";
+			txt += "duration 00:00:01.500";
+			txt += "\r\n";
+			//System.out.println("[txt 7-11] "+txt);
+		}
+		fw.write(txt);
+		fw.flush();
+		txt="";
+		
+		for (int i = 11; i < 18; i++) {
+			txt += "file '" + imgs.get(i).getName() + "'";
+			txt += "\r\n";
+			txt += "duration 00:00:00.500";
+			txt += "\r\n";
+			//System.out.println("[txt 12-18] "+txt);
+		}
+		fw.write(txt);
+		fw.flush();
+		txt="";
+		
+		txt += "file '" + imgs.get(18).getName() + "'";
+		txt += "\r\n";
+		txt += "duration 00:00:03.000";
+		txt += "\r\n";
+		//System.out.println("[txt 19] "+txt);
+		fw.write(txt);
+		fw.flush();
+		txt="";
+		
+		for (int i = 19; i < 22; i++) {
+			txt += "file '" + imgs.get(i).getName() + "'";
+			txt += "\r\n";
+			txt += "duration 00:00:01.000";
+			txt += "\r\n";
+			//System.out.println("[txt 20-22] "+txt);
+		}
+		fw.write(txt);
+		fw.flush();
+		txt="";
+		
+		txt += "file '" + imgs.get(22).getName() + "'";
+		txt += "\r\n";
+		txt += "duration 00:00:03.000";
+		txt += "\r\n";
+		//System.out.println("[txt 23] "+txt);
+		fw.write(txt);
+		fw.flush();
+		txt="";
+
+		for (int i = 23; i < 26; i++) {
+			txt += "file '" + imgs.get(i).getName() + "'";
+			txt += "\r\n";
+			txt += "duration 00:00:01.000";
+			txt += "\r\n";
+			//System.out.println("[txt 24-26] "+txt);
+		}
+		fw.write(txt);
+		fw.flush();
+		txt="";
+		
+		txt += "file '" + imgs.get(26).getName() + "'";
+		txt += "\r\n";
+		txt += "duration 00:00:03.000";
+		txt += "\r\n";
+		//System.out.println("[txt 27] "+txt);
+		
+		fw.write(txt);
+		fw.flush();
+		txt="";
 
 		// 객체 닫기
 		fw.close();
 
 	}
+	
 }

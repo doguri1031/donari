@@ -11,13 +11,14 @@ public class Main {
 		imageList il = new imageList();
 		imageResize imgresize = new imageResize();
 		imagePathList ipl = new imagePathList();
+		mkContentsList mkcl = new mkContentsList();
 		
-		//1. 이미지 리스트 불러오기
+		// 이미지 리스트 불러오기
 		ArrayList<File> imgs = il.getImg("jpg", ipl.ORIGIN_PAHT);
 		
 		//이미지 사이즈 체크
-		int width = 600;
-		int height = 450;
+		int width = 640;
+		int height = 360;
 		if (!imgresize.sizeCheck(imgs, width, height)) {
 			System.out.println("[wrong size] run resize");
 		}
@@ -29,7 +30,12 @@ public class Main {
 		imgresize.resize(imgs, format, width, height);
 		System.out.println("[resize complete]");
 		
-		//makeVideo.makeVideo();
+		//리스트 업데이트
+		imgs = il.getImg(format, ipl.TO_PAHT);
+		
+		//imgresize.getInputs(imgs);
+		
+//		makeMV mk = new makeMV();
 		
 	}
 
